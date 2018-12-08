@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>CatraComputer</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="icon" type="image/png" href="img/ico.png">
+  <link rel="stylesheet" href="css/font-awesome.css">
+  <!--Agregar css personal-->
+
+</head>
+
+<body>
+
+<h1>CatraComputer</h1>
+<br><hr>
+
+<div class="container">
+  <div class="row">
+    <div class="col align-self-start">
+      <textarea placeholder="Instrucciones..." rows="15" cols="20" id="txt-inst"></textarea>
+      <br>
+      <button onclick="compilar()">compilar</button>
+    </div>
+    <div class="col align-self-center" id="tbl">
+      <h4>Tabla de Memoria</h4>
+      <table class="table table-striped table-hover" id="tabla-inst">
+
+      </table>
+    </div>
+  </div>
+</div>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <script src="js/controller.js"></script>
+
+  <!--Agregar JS personal-->
+</body>
+</html>
