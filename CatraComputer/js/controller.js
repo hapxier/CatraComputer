@@ -68,7 +68,7 @@ function compilar(){
         //Control de las instrucciones
 		if(obj.data[i-1].instruccion==10){
 			var val = prompt("Ingrese el valor:");
-			if (val == null || val == "") {
+			if (val == null || val == "" ) {
 			val_ingresado = "Valor no valido, Se cancelo el ingreso.";
 			alert(val_ingresado);
 			} else {
@@ -206,3 +206,15 @@ BIFURCACERO = 42
 ALTO = 43
 
 */
+function Numeros(string){//Solo numeros
+    var out = '';
+    var filtro = '+1234567890\n';//Caracteres validos
+
+    for (var i=0; i<string.length; i++)
+       if (filtro.indexOf(string.charAt(i)) != -1) 
+            
+	     out += string.charAt(i);
+	
+  
+    return out;
+} 
