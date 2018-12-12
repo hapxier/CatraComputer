@@ -24,20 +24,31 @@ function compilar(){
         //Control de las instrucciones
 		if(obj.data[i-1].instruccion==10){
 			var val = prompt("Ingrese el valor:");
-			if (val == null || val == "" ) {
-			val_ingresado = "Valor no valido, Se cancelo el ingreso.";
-			alert(val_ingresado);
-			} else {
-			val_ingresado = val;
+
+
+		        while (isNaN(val)){
+				alert("Entrada no valida. Ingrese numeros");
+				val=prompt("Ingrese el valor:");
+			
+			}
+
+			if(val=="" || val==" "|| val==null){
+				alert("No ingreso el valor");
+					break;
+						
+			}else{			 
 				var t_dir= obj.data[i-1].dir;
 				for (var j = 1; j < obj.data.length; j++) {
 					if (obj.data[j-1].ubicacion==t_dir) {
-						obj.data[j-1].value= val_ingresado;
+						obj.data[j-1].value= val;
 					}
 				}
+
 			}
+			
 			document.getElementById("tabla-reg").innerHTML +=
-					"<tr><td>"+'Se ingreso el valor: '+val_ingresado+"</td></tr>";
+					"<tr><td>"+'Se ingreso el valor: '+val+"</td></tr>";
+
 	    }else if(obj.data[i-1].instruccion==11){
 	        
 	        var t_dir= obj.data[i-1].dir;
@@ -279,22 +290,37 @@ function compilarPaso(){
         //Control de las instrucciones
 		if(obj.data[i-1].instruccion==10){
 			var val = prompt("Ingrese el valor:");
-			if (val == null || val == "" ) {
-				val_ingresado = "Valor no valido, Se cancelo el ingreso.";
-				alert(val_ingresado);
-			} else {
-				val_ingresado = val;
+
+
+		        while (isNaN(val)){
+				alert("Entrada no valida. Ingrese numeros");
+				val=prompt("Ingrese el valor:");
+
+			
+			}
+
+			if(val=="" || val==" "|| val==null){
+				alert("No ingreso el valor");
+			 
+				$("#btn-p").attr("disabled", "disabled");
+			}else{			 
 				var t_dir= obj.data[i-1].dir;
 				for (var j = 1; j < obj.data.length; j++) {
 					if (obj.data[j-1].ubicacion==t_dir) {
-						obj.data[j-1].value= val_ingresado;
+						obj.data[j-1].value= val;
 					}
 				}
-			}
+
+		
+		
+				}
+			
 			document.getElementById("tabla-reg").innerHTML +=
-					"<tr><td>"+'Se ingreso el valor: '+val_ingresado+"</td></tr>";
+					"<tr><td>"+'Se ingreso el valor: '+val+"</td></tr>";
 		///////////////////////////////////////////////////////////////////////////////
-	    }else if(obj.data[i-1].instruccion==11){
+	    }
+
+	    else if(obj.data[i-1].instruccion==11){
 	        
 	        var t_dir= obj.data[i-1].dir;
 
