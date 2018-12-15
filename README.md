@@ -10,7 +10,7 @@ Saul David Del Cid Mendoza 20131002672<br>
 https://catracomputeris.herokuapp.com/
 
 <strong>Instrucciones de uso:</strong><br>
-cada instruccion en lmcc debe comenzar con un signo mas (+), contendra sinco digitos los cuales se dividen de la siguiente forma, los primeros 2 son la instruccion y los restantes 3 son la direccion (ejemplo: +10007).<br>
+cada instruccion en lmcc debe comenzar con un signo mas (+), seguido de cinco digitos los cuales se dividen de la siguiente forma, los primeros 2 son la instruccion y los restantes 3 son la direccion (ejemplo: +10007).<br>
 Cada ves que se ejecute un programa se debera reiniciar(mediante el boton) o refrescar la pagina, esto para el correcto funcionamiento del proyecto.
 
 <strong>programas de ejemplo:</strong><br>
